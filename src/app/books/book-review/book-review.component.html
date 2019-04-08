@@ -1,0 +1,17 @@
+<form [formGroup]="reviewForm">
+  <div class="remove">
+    <a (click)="delete(i)">Remove review</a>
+  </div>
+  <div class="reactive-input-group">
+    <label>Title</label>
+    <input type="text" formControlName="title" />
+  </div>
+  <div class="reactive-input-group">
+    <label>Text</label>
+    <input type="text" formControlName="text" />
+  </div>
+  <div class="reactive-input-group">
+    <label>Rating</label>
+    <input type="number" formControlName="rating" />
+  </div>
+</form>

@@ -9,8 +9,6 @@ import { FormGroup, FormBuilder, FormArray } from "@angular/forms";
 export class ProfileComponent implements OnInit {
   profileForm: FormGroup;
 
-  friendsForm: FormGroup;
-
   constructor(private _fb: FormBuilder) {}
 
   ngOnInit() {

@@ -1,0 +1,19 @@
+form {
+  border: 1px solid #c5c2bc;
+}
+
+.reactive-input-group {
+  margin: 20px;
+}
+
+.reactive-input-group input {
+  float: right;
+}
+
+.remove {
+  text-align: right;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 20px;
+}

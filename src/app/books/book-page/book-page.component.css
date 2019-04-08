@@ -1,0 +1,28 @@
+form {
+  width: 500px;
+  background-color: rgb(238, 216, 180);
+  margin: 50 px;
+  padding: 50px;
+}
+
+.reactive-input-group {
+  margin: 20px;
+}
+
+.reactive-input-group input {
+  float: right;
+}
+
+.add-new {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  float: left;
+}
+
+.submit-button {
+  margin-right: 20px;
+  margin-top: 20px;
+  float: right;
+}

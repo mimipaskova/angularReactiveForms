@@ -1,0 +1,31 @@
+<form [formGroup]="booksForm" (ngSubmit)="onSubmit()">
+  <div class="reactive-input-group">
+    <label>Title</label>
+    <input type="text" formControlName="title" />
+  </div>
+  <div class="reactive-input-group">
+    <label>Author</label>
+    <input type="text" formControlName="author" />
+  </div>
+  <div class="reactive-input-group">
+    <label>Rating</label>
+    <input type="number" formControlName="rating" />
+  </div>
+
+  <div formArrayName="reviews">
+    <div
+      *ngFor="let review of booksForm.controls.reviews.controls; let i = index"
+    >
+      <app-book-review
+        [index]="i"
+        [reviewForm]="review"
+        (deleteReview)="removeReview($event)"
+      >
+      </app-book-review>
+    </div>
+  </div>
+  <div>
+    <a class="add-new" (click)="addReview()">Add new review</a>
+    <button class="submit-button" type="submit">Submit</button>
+  </div>
+</form>

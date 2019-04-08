@@ -7,8 +7,12 @@ const routes: Routes = [
     loadChildren: "./profile/profile.module#ProfileModule"
   },
   {
+    path: "books",
+    loadChildren: "./books/books.module#BooksModule"
+  },
+  {
     path: "**",
-    redirectTo: "/profile",
+    redirectTo: "/books",
     pathMatch: "full"
   }
 ];

@@ -1,0 +1,44 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="profileForm">
+  <div class="reactive-input-group">
+    <label>First Name</label>
+    <input type="text" formControlName="firstName" />
+  </div>
+  <div class="reactive-input-group">
+    <label>Last Name</label>
+    <input type="text" formControlName="lastName" />
+  </div>
+  <div class="reactive-input-group">
+    <label>Location</label>
+    <input type="text" formControlName="location" />
+  </div>
+  <div formArrayName="friends">
+    <div
+      *ngFor="
+        let friend of profileForm.controls.friends.controls;
+        let i = index
+      "
+    >
+      <div [formGroupName]="i" class="friend-group">
+        <div class="reactive-input-group">
+          <label>Nickname</label>
+          <input type="text" formControlName="nickname" />
+        </div>
+        <div class="reactive-input-group">
+          <label>City</label>
+          <input
+            type="text"
+            placeholder="city {{ i }}"
+            formControlName="city"
+          />
+        </div>
+        <div class="remove-friend">
+          <a (click)="removeFriend(i)">Remove friend</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <a class="add-new-friend" (click)="addFriend()">Add new friend</a>
+    <button class="submit-button" type="submit">Submit</button>
+  </div>
+</form>

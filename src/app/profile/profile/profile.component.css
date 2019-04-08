@@ -1,0 +1,40 @@
+.profileForm {
+  width: 300px;
+  background-color: blanchedalmond;
+  margin: 50 px;
+  padding: 50px;
+}
+
+.reactive-input-group {
+  margin: 20px;
+}
+
+.friend-group {
+  border: 1px solid #bb8e4a;
+}
+
+.reactive-input-group input {
+  float: right;
+}
+
+.add-new-friend {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  float: left;
+}
+
+.remove-friend {
+  text-align: right;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.submit-button {
+  margin-right: 20px;
+  margin-top: 20px;
+  float: right;
+}
